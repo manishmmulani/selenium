@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="deshaw.com" />
+<title>IRCTC_book</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">IRCTC_book</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=jpBook:payOption:1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=jpBook:bankPGList</td>
+	<td>Visa/Master Card(Powered By AXIS BANK)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=card_type_id</td>
+	<td>javascript{credit.type}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=card_no_id</td>
+	<td>javascript{credit.number}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=card_expiry_mon_id</td>
+	<td>javascript{&quot;value=&quot; + credit.expiry_month}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=card_expiry_year_id</td>
+	<td>javascript{credit.expiry_year}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cvv_no_id</td>
+	<td>javascript{credit.cvv}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=card_name_id</td>
+	<td>javascript{credit.name}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;captcha?&quot;)</td>
+	<td>captcha</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=captcha_txt</td>
+	<td>${captcha}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

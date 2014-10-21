@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.airtel.in/" />
+<title>airtel prepaid</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">airtel prepaid</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://pay.airtel.com/online-payments/prepaidResponse.do</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;Recharge for customer1,customer2,customer3?&quot;)</td>
+	<td>customerName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{var people = {&quot;customer2&quot; : 9999999999, &quot;customer3&quot; : 8888888888, &quot;customer1&quot; : 6666666666, &quot;customer3_unr&quot; : 7777777777};people[storedVars[&quot;customerName&quot;]]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=showDiv</td>
+	<td>javascript{var people = {&quot;customer2&quot; : 9999999999, &quot;customer3&quot; : 8888888888, &quot;customer1&quot; : 6666666666};people[storedVars[&quot;customerName&quot;]]}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=payEmailId</td>
+	<td>mulanimonty@gmail.com</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='amountsFTT']/tbody/tr[2]/td/table/tbody/tr[2]/td/div/table/tbody/tr[2]/td/table/tbody/tr/td</td>
+	<td>Rs. 200</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=amountsList</td>
+	<td>label=Rs. 200</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.credit-card</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@onclick='checkPaymentMode();']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

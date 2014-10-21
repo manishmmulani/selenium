@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="deshaw.com" />
+<title>IRCTC_Input</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">IRCTC_Input</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;Enter From, To and Date(dd-MMM-yyyy) comma-separated - &quot; + getStationsStr())</td>
+	<td>fromToDateStr</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['fromToDateStr'].split(&quot;,&quot;)</td>
+	<td>fromToDateArray</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>getStationValue(storedVars['fromToDateArray'][0])</td>
+	<td>from</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>getStationValue(storedVars['fromToDateArray'][1])</td>
+	<td>to</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['fromToDateArray'][2]</td>
+	<td>date</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=jpform:fromStation</td>
+	<td>${from}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=jpform:toStation</td>
+	<td>${to}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=jpform:journeyDateInputDate</td>
+	<td>${date}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=jpform:jpsubmit</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.airtel.in/" />
+<title>citi_credit</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">citi_credit</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=OTH_CREDIT_RAD</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=OTH_CREDIT_CARD</td>
+	<td>javascript{credit.number.substring(0,4)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>document.fm_oth_credit.cardNum2</td>
+	<td>javascript{credit.number.substring(4,8)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>document.fm_oth_credit.cardNum3</td>
+	<td>javascript{credit.number.substring(8,12)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>document.fm_oth_credit.cardNum4</td>
+	<td>javascript{credit.number.substring(12,16)}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>document.fm_oth_credit.HtmlMonth</td>
+	<td>javascript{credit.expiry_month}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>document.fm_oth_credit.HtmlYear</td>
+	<td>javascript{credit.expiry_year-2000}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>document.fm_oth_credit.HtmlCVVNum</td>
+	<td>javascript{credit.cvv}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@type='button'])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

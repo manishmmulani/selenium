@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="pay.airtel.com" />
+<title>ICICI_CREDIT</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ICICI_CREDIT</td></tr>
+</thead><tbody>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('name').value='NAMEON CREDITCARD'</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=creditCrdRadio</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.frmPG.RadioGroupCrd[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=CardNumCrd1</td>
+	<td>javascript{credit.number.substring(0,4)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=CardNumCrd2</td>
+	<td>javascript{credit.number.substring(4,8)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=CardNumCrd3</td>
+	<td>javascript{credit.number.substring(8,12)}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=CardNumCrd4</td>
+	<td>javascript{credit.number.substring(12,16)}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=creditExpDtMon</td>
+	<td>javascript{credit.expiry_month}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=creditExpDtYr</td>
+	<td>javascript{credit.expiry_year}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=creditCVV</td>
+	<td>javascript{credit.cvv}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=btnPay</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

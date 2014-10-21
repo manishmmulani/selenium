@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="deshaw.com" />
+<title>IRCTC_passengers</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">IRCTC_passengers</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>var nickStr=prompt(&quot;Enter passengers comma-separated &quot; + getNicks()); nickStr.split(&quot;,&quot;)</td>
+	<td>passengerNicks</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['passengerNicks'].length</td>
+	<td>noOfPassengers</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>confirm(&quot;Tatkal?&quot;)</td>
+	<td>isTatkal</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>passengerIndex</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${passengerIndex} &lt; ${noOfPassengers}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>getPassenger(storedVars['passengerNicks'][storedVars['passengerIndex']])</td>
+	<td>currentPassenger</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addPassengerForm:psdetail:${passengerIndex}:psgnName</td>
+	<td>javascript{storedVars['currentPassenger'].name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addPassengerForm:psdetail:${passengerIndex}:psgnAge</td>
+	<td>javascript{storedVars['currentPassenger'].age}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=addPassengerForm:psdetail:${passengerIndex}:psgnGender</td>
+	<td>javascript{storedVars['currentPassenger'].gender}</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>!${isTatkal}</td>
+	<td>seniority</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=addPassengerForm:psdetail:${passengerIndex}:idCardType</td>
+	<td>PAN Card</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addPassengerForm:psdetail:${passengerIndex}:idCardNumber</td>
+	<td>javascript{storedVars['currentPassenger'].pan}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>seniority</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars['isTatkal'] || !storedVars['currentPassenger'].senior}</td>
+	<td>loopOver</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addPassengerForm:psdetail:${passengerIndex}:concessionOpt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>loopOver</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${passengerIndex} + 1</td>
+	<td>passengerIndex</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=addPassengerForm:autoUpgrade</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addPassengerForm:mobileNo</td>
+	<td>9160635930</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>prompt(&quot;Captcha?&quot;)</td>
+	<td>captcha</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_captcha</td>
+	<td>${captcha}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>confirm(&quot;Can I proceed with the booking?&quot;)</td>
+	<td>confirmBooking</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>!${confirmBooking}</td>
+	<td>invalidForm</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=validate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>invalidForm</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
